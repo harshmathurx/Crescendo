@@ -1,0 +1,54 @@
+body{
+    background-color: black;
+    color: white;
+    display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-align: center;
+  -ms-flex-pack: center;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  padding-top: 15%;
+  padding-bottom: 15%;
+}
+
+
+
+.card-body{
+    color: black;
+}
+
+.spotify-icon{
+    width: 10%;
+}
+
+.card{
+    margin: 10px;
+    border: none;
+}
+
+.btn{
+
+}
+
+.btn-spotify{
+    background-color: #15883e;
+    border: none;
+    border-radius: 100px;
+    color: white;
+}
+
+.btn-spotify:hover{
+    background-color: #1db954;
+    color: white;
+}
+
+#login {
+    
+}
+
+#loggedin {
+    
+}
