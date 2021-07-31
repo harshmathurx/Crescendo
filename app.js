@@ -18,7 +18,7 @@ let username = "";
 var spotifyApi = new SpotifyWebApi({
     clientId: process.env.CLIENT_ID,
     clientSecret: process.env.CLIENT_SECRET,
-    redirectUri: "https://shrouded-bastion-38716.herokuapp.com/callback"
+    redirectUri: "https://whispering-retreat-12086.herokuapp.com/callback"
 });
 
 app.get("/", function (req, res) {
