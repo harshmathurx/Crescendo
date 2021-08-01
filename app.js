@@ -103,7 +103,7 @@ app.get("/artists", function (req, res) {
 });
 
 app.get("/tracks", function (req, res) {
-    spotifyApi.getMyTopTracks({time_range:'short_term',limit:4})
+    spotifyApi.getMyTopTracks({time_range:'medium_term',limit:4})
         .then(function (data) {
             let topTracks = data.body.items;
             res.render("tracks",{songsList:topTracks,displayName:username});
