@@ -1,18 +1,28 @@
 <%- include('partials/header') %>
 
+<div class="cont">
+    <h1>Where do you want to go first?</h1>
     <div class="row">
-        <h1>Where do you want to go first?</h1>
-        <div class="col-sm-6">
-            <div class="card">
-                <a href="/tracks" class="btn btn-primary">Top Song</a>
-            </div>
-        </div>
-
-        <div class="col-sm-6">
-            <div class="card">
-                <a href="/artists" class="btn btn-primary">Top Artist</a>
-            </div>
+        <div class="btn">
+            <a href="/tracks" class="btn btn-primary">Top Song</a>
         </div>
     </div>
+
+    <div class="row"></div>
+        <div class="btn">
+            <a href="/artists" class="btn btn-primary">Top Artist</a>
+        </div>
+    </div>
+
+    <div class="credits">
+      <p>Made by Harsh Mathur <a href="http://www.github.com/harshmathurx"></a></p>
+
+      <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js"
+          data-name="bmc-button" data-slug="harshmathurx" data-color="#FFDD00" data-emoji=""
+          data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000000"
+          data-font-color="#000000" data-coffee-color="#ffffff"></script>
+  </div>
+</div>
+
 
     <%- include('partials/footer') %>

@@ -2,16 +2,6 @@ body{
     background-color: black;
     color: white;
     display: -ms-flexbox;
-  display: -webkit-box;
-  display: flex;
-  -ms-flex-align: center;
-  -ms-flex-pack: center;
-  -webkit-box-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  justify-content: center;
-  padding-top: 15%;
-  padding-bottom: 15%;
 }
 
 
@@ -27,6 +17,7 @@ body{
 .card{
     margin: 10px;
     border: none;
+    background-color: black;
 }
 
 .btn{
@@ -37,7 +28,9 @@ body{
     background-color: #15883e;
     border: none;
     border-radius: 100px;
+    
     color: white;
+    box-sizing: unset;
 }
 
 .btn-spotify:hover{
@@ -45,10 +38,37 @@ body{
     color: white;
 }
 
-#login {
-    
+.company{
+    margin-bottom: 5%;
 }
 
-#loggedin {
-    
+.stuff{
+    display: block;
+    margin: 2% auto;
+    width: 80%;
+    height: 30%;
 }
+
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    .cont{
+        margin: 15% 10% 0% 10%;
+        width: 80%;
+    }
+}
+
+@media only screen and (min-device-width: 375px) 
+    and (max-device-width: 900px)
+    and (orientation: portrait){
+      .cont{
+          margin: 30% 1% 0% 1%;
+
+      }
+    }
+
+    .credits{
+        color: white;
+        margin-top: 15%;
+      }

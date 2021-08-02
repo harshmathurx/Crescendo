@@ -13,9 +13,9 @@
       padding: 0;
       width: 100%;
       font-family: roboto;
-    
+
     }
-    
+
     .tweet-container {
       box-sizing: border-box;
       text-align: left;
@@ -198,22 +198,32 @@
       z-index: 999;
       margin-right: -5px;
     }
-    @media only screen and (max-width: 600px) {
+
+    #tweet{
+      margin: 15% 15%;
+      width:80%;
+      
+    }
+
+    @media only screen and (min-device-width: 375px) 
+    and (max-device-width: 812px)
+    and (orientation: portrait){
       #tweet{
-        width:100%
+        width:100%;
+        margin: 15% 0%;
       }
     }
-    
-    #tweet{
-      margin: auto auto;
-      width:58.33333333%
+
+    .credits{
+      color: white;
+      margin-top: 15%;
     }
-    
+
     .wrap {
       position: relative;
       margin: 0px;
     }
-    
+
     .box {
       height: auto;
       min-height: 100px;
@@ -241,7 +251,7 @@
       width: 1px;
       z-index: 0;
     }
-    
+
     .box:last-child .border {
       display: none;
     }
@@ -315,4 +325,5 @@
       font-weight: 400;
       margin-left: 8px;
     }
+
     
