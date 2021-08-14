@@ -6,3 +6,7 @@ Deployed live at https://crescendomusic.herokuapp.com/
 ![](Crescendo.png)
 ![](crescendo_main.png)
 ![](crescendo_song.png)
+
+# Tech Stack
+Made using HTML, CSS, EJS, Node.js, Express JS
+
