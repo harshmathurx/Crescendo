@@ -7,6 +7,16 @@ Deployed live at https://crescendomusic.herokuapp.com/
 ![](crescendo_main.png)
 ![](crescendo_song.png)
 
+# To run the app locally
+1. Create a `.env` file
+2. Get your CLIENT_ID and CLIENT_SECRET from https://developer.spotify.com/
+3. run the command 
+```
+npm install
+nodemon app.js
+```
+
+
 # Tech Stack
 Made using HTML, CSS, EJS, Node.js, Express JS
 
