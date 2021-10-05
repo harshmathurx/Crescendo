@@ -10,3 +10,7 @@ Deployed live at https://crescendomusic.herokuapp.com/
 # Tech Stack
 Made using HTML, CSS, EJS, Node.js, Express JS
 
+# To collaborate
+1. Fork the repo
+2. Make changes in a seperate branch 
+3. Make a PR to the `master` branch 
