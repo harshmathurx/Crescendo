@@ -1,7 +1,7 @@
 # Crescendo
 A web app that displays your spotify top artist and top song in the form of a tweet
 
-Deployed live at https://crescendomusic.herokuapp.com/
+Deployed live at https://crescendo.up.railway.app/
 
 ![](Crescendo.png)
 ![](crescendo_main.png)
