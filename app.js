@@ -18,7 +18,7 @@ let username = "";
 var spotifyApi = new SpotifyWebApi({
     clientId: process.env.CLIENT_ID,
     clientSecret: process.env.CLIENT_SECRET,
-    redirectUri: "http://localhost:3000/callback"
+    redirectUri: "https://crescendo.up.railway.app/callback"
 });
 
 app.get("/", function (req, res) {
@@ -134,6 +134,6 @@ app.get("/tracks", function (req, res) {
 
 });
 
-app.listen(3000, function () {
+app.listen(process.env.PORT, function () {
     console.log("Server started at port 3000");
 });
