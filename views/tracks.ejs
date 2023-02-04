@@ -5,13 +5,19 @@
     <meta charset="utf-8">
     <title>Crescendo</title>
     <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <meta name="description" content="Know what you've been listening to bestie" />
+    <meta property="og:title" content="Crescendo" />
+    <meta property="og:description" content="Know what you've been listening to bestie" />
+    <!-- <meta property="og:url" content="https://medium-clone-harsh.vercel.app/" /> -->
+    <meta property="og:type" content="website" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css"
         integrity="sha384-wESLQ85D6gbsF459vf1CiZ2+rr+CsxRY0RpiF1tLlQpDnAgg6rwdsUF1+Ics2bni" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/styles.css">
+
     <link rel="stylesheet" href="css/tweet.css">
+
 </head>
 
 <body class="text-center">
@@ -21,14 +27,17 @@
                 <div class="user pr">
                     <img src="img/spotify.svg" />
                     <div class="username">
-                        <div class="name">Spotify <span class="handle">@spotify</span></div>
+                        <div class="name">Spotify <span class="handle"><br>@spotify</span></div>
                     </div>
                     <i class="material-icons">keyboard_arrow_down</i>
                 </div>
                 <div class="tweet-content pt">are you okay bestie? You have been playing <%=songsList[0].name%> a
                         lot lately. Do you need help?</div>
 
-                <div class="date pt pb">4:20 pm • 31 July, 2021 • Twitter Web App</div>
+                <div class="date pt pb">
+                    <%=time%> • <%=date%>, <%=year%> • Twitter Web App
+                </div>
+
 
                 <div class="rl pt pb">
                     <div class=retweets><b>15.4K</b> Retweets</div>

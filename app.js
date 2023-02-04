@@ -13,12 +13,12 @@ const scopes = [
     'user-top-read',
 ];
 
-let token = "";
+let token = undefined;
 let username = "";
 var spotifyApi = new SpotifyWebApi({
     clientId: process.env.CLIENT_ID,
     clientSecret: process.env.CLIENT_SECRET,
-    redirectUri: "https://crescendo.up.railway.app/callback/"
+    redirectUri: "http://localhost:3000/callback"
 });
 
 app.get("/", function (req, res) {
@@ -26,6 +26,7 @@ app.get("/", function (req, res) {
 })
 
 app.get('/login', function (req, res) {
+    console.log(spotifyApi.createAuthorizeURL(scopes));
     res.redirect(spotifyApi.createAuthorizeURL(scopes));
 });
 
@@ -76,6 +77,10 @@ app.get("/callback", function (req, res) {
 });
 
 app.get("/warrant", function (req, res) {
+    if (!token) {
+        res.redirect("/");
+    }
+
     const spotifyApi = new SpotifyWebApi();
     spotifyApi.setAccessToken(token);
 
@@ -93,26 +98,42 @@ app.get("/warrant", function (req, res) {
 });
 
 app.get("/artists", function (req, res) {
+    if (!token) {
+        res.redirect("/");
+    }
+
     spotifyApi.getMyTopArtists()
         .then(function (data) {
             let topArtists = data.body.items;
-            res.render("artists",{artists:topArtists,displayName:username});
+            console.log(new Date().getTime().toLocaleString('en-US', {}));
+            let time = new Date().toLocaleString('en-in', { hour: '2-digit', minute: 'numeric', hour12: true })
+            let date = new Date().toLocaleString('en-in', { month: 'short', day: 'numeric' })
+            let year = new Date().toLocaleString('en-in', { year: 'numeric' })
+            res.render("artists", { artists: topArtists, displayName: username, time, date, year });
         }, function (err) {
             console.log('Something went wrong!', err);
         });
 });
 
 app.get("/tracks", function (req, res) {
-    spotifyApi.getMyTopTracks({time_range:'medium_term',limit:4})
+
+    if (!token) {
+        res.redirect("/");
+    }
+
+    spotifyApi.getMyTopTracks({ time_range: 'medium_term', limit: 4 })
         .then(function (data) {
             let topTracks = data.body.items;
-            res.render("tracks",{songsList:topTracks,displayName:username});
+            let time = new Date().toLocaleString('en-in', { hour: '2-digit', minute: 'numeric', hour12: true })
+            let date = new Date().toLocaleString('en-in', { month: 'short', day: 'numeric' })
+            let year = new Date().toLocaleString('en-in', { year: 'numeric' })
+            res.render("tracks", { songsList: topTracks, displayName: username, time, date, year });
         }, function (err) {
             console.log('Something went wrong!', err);
         });
 
 });
 
-app.listen(process.env.PORT, function () {
-    console.log("Server started");
+app.listen(3000, function () {
+    console.log("Server started at port 3000");
 });

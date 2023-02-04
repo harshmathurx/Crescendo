@@ -1,74 +1,63 @@
-body{
+body {
     background-color: black;
     color: white;
     display: -ms-flexbox;
 }
 
-
-
-.card-body{
+.card-body {
     color: black;
 }
 
-.spotify-icon{
+.spotify-icon {
     width: 10%;
 }
 
-.card{
+.card {
     margin: 10px;
     border: none;
     background-color: black;
 }
 
-.btn{
+.btn {}
 
-}
-
-.btn-spotify{
+.btn-spotify {
     background-color: #15883e;
     border: none;
     border-radius: 100px;
-    
     color: white;
     box-sizing: unset;
 }
 
-.btn-spotify:hover{
+.btn-spotify:hover {
     background-color: #1db954;
     color: white;
 }
 
-.company{
+.company {
     margin-bottom: 5%;
 }
 
-.stuff{
+.stuff {
     display: block;
     margin: 2% auto;
     width: 80%;
     height: 30%;
 }
 
-@media screen 
-  and (min-device-width: 1200px) 
-  and (max-device-width: 1600px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
-    .cont{
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+    .cont {
         margin: 15% 10% 0% 10%;
         width: 80%;
     }
 }
 
-@media only screen and (min-device-width: 375px) 
-    and (max-device-width: 900px)
-    and (orientation: portrait){
-      .cont{
-          margin: 30% 1% 0% 1%;
-
-      }
+@media only screen and (min-device-width: 375px) and (max-device-width: 900px) and (orientation: portrait) {
+    .cont {
+        margin: 30% 1% 0% 1%;
     }
+}
 
-    .credits{
-        color: white;
-        margin-top: 15%;
-      }
+.credits {
+    color: white;
+    margin-top: 15%;
+}
