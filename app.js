@@ -18,7 +18,7 @@ let username = "";
 var spotifyApi = new SpotifyWebApi({
     clientId: process.env.CLIENT_ID,
     clientSecret: process.env.CLIENT_SECRET,
-    redirectUri: "https://crescendo.up.railway.app/callback"
+    redirectUri: "https://crescendo-music.onrender.com/callback"
 });
 
 app.get("/", function (req, res) {
